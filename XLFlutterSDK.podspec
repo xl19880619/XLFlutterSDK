@@ -1,22 +1,25 @@
 Pod::Spec.new do |s|
-  s.name         = "UXANRMonitor"
+  s.name         = "XLFlutterSDK"
   s.version      = "0.0.1"
-  s.summary      = "A ios ANR check tool."
+  s.summary      = "iOS Flutter SDK."
   s.description  = <<-DESC
-                    卡顿检测工具
+                    混编私有Pod库
                    DESC
 
-  s.homepage     = "http://git.xin.com/ios_publib/UXANRMonitor"
+  s.homepage     = "https://github.com/xl19880619/XLFlutterSDK"
 
   s.license      = "MIT"
   s.author       = { "Xie Lei" => "xielei@xin.com" }
   
-  s.platform     = :ios, "9.0"
+  s.platform     = :ios, "10.0"
 
-  s.source       = { :git => "http://git.xin.com/ios_publib/UXANRMonitor.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/xl19880619/XLFlutterSDK.git", :tag => "#{s.version}" }
 
-  s.source_files  = "Classes", "Classes/**/*.{h,m}"
-  s.exclude_files = "Classes/Exclude"
+  # s.source_files  = "Classes", "Classes/**/*.{h,m}"
+  # s.exclude_files = "Classes/Exclude"
+
+  s.vendored_frameworks = 'Flutter/*.framework', 'Framework/engine/*.framework'
+  s.resources = 'Flutter/flutter_assets'
 
   # s.public_header_files = "Classes/**/*.h"
 
